@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS form</title>
+    <style>
+        input:focus[type=text]{
+            width: 66%;
+            border-color: green;
+            padding: 12px;
+            color: rgb(17, 6, 73);
+            background-color: greenyellow;
+            outline: none;
+            transition: width 0.7s ease-in-out;
+
+        }
+        input:focus{
+            border: 4px solid purple;
+            width: 50%;
+            border: radius 4px;
+            background-color: darkcyan;
+            transition: width 0.3s ease-in-out;
+            
+        }
+        
+        textarea{
+            resize: horizontal;
+        }
+        select{
+            padding: 15px;
+            border: 1px;
+            background-color: aquamarine;
+            color: darkgreen;
+            width: 333px;
+            border-radius: 5px;
+
+
+        }
+
+        input[type=submit],input [type=reset]
+        {
+            background-color: blueviolet;
+            color: aquamarine;
+            padding: 6px;
+            margin: 3px;
+            border-radius: 9px;
+            cursor: col-resize;
+
+        }
+        input[type=submit]:hover
+        {
+            
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="">First Name</label>
+        <input type="text"><br>
+        <select name="" id="">
+            <option value="">Selecting your course</option>
+            <option value="">Comp sci</option>
+            <option value="">MBA</option>
+            <option value="">BCS</option>
+        </select>
+        <label for="">last name</label>
+        <br><br>
+        
+        <input type="password"><br>
+        <textarea name="" id="" cols="10" rows="11"></textarea><br>
+        <input type="submit"><br>
+
+        <input type="reset">
+
+    </form>
+</body>
+</html>
