@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        button{
+            background-color: antiquewhite;
+            color: blue;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            box-shadow: 5px 5px 5px purple;
+            border-radius: 20%;
+
+        }
+        input{
+            width: 150px;
+            height: 50px;
+            text-align: right;
+            font-size: 12pt;
+            box-shadow: 5px 5px 5px blue;
+            border-radius: 10%;
+
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="3"><input type="text" id="result" readonly></td>
+            <td><button onclick="clear result">C</button></td>
+        </tr>
+<tr>
+   
+    <td><button onclick="display(7)">7</button></td>
+    <td><button onclick="display(8)">8</button></td>
+    <td><button onclick="display(9)">9</button></td>
+     <td><button onclick="display(*)">*</button></td>
+
+</tr>
+<tr>
+   
+    <td><button onclick="display(4)">4</button></td>
+    <td><button onclick="display(5)">5</button></td>
+    <td><button onclick="display(6)">6</button></td>
+     <td><button onclick="display(/)">/</button></td>
+
+</tr>
+<tr>
+   
+    <td><button onclick="display(1)">1</button></td>
+    <td><button onclick="display(2)">2</button></td>
+    <td><button onclick="display(3)">3</button></td>
+     <td><button onclick="display(+)">+</button></td>
+
+</tr>
+<tr>
+   
+    <td><button onclick="display(0)">0</button></td>
+    <td><button onclick="display(.)">.</button></td>
+    <td><button onclick="display(=)">=</button></td>
+     <td><button onclick="display(-)">-</button></td>
+
+</tr>
+
+    </table>
+    <script>
+        function display(x)
+        {
+            document.getElementById("result").value+=x;
+
+        }
+        function calc_result()
+        {
+            e=DocumentFragment.getElementById("result").value;
+            document.getElementById("result").value=eval(e);
+        }
+        function clear_result()
+        {
+            document.getElementById("result").value="";
+        }
+    </script>
+</body>
+</html>

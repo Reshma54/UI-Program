@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram Check</title>
+</head>
+<body>
+<label for="s1">Enter string one</label>
+<input type="text" id="s1"><br>
+<label for="s2">Enter string one</label>
+<input type="text" id="s2"><br>
+
+
+    <button onclick="check()"> Check Anagram</button>
+    
+    <script>
+        function Anagram (firststr,secondstr);
+{
+        firststr=firststr.toLowerCase()
+        secondstr=secondstr.toLowerCase()
+
+        fisrtarray=firststr.split("")
+        secondarray=secondstr.split("")
+
+        fisrtarray.sort()
+        secondarray.sort()
+
+        firststr=fisrtarray.join("")
+        secondstr=secondarray.join("")
+
+        return firststr==secondstr
+}
+
+function check()
+{
+    var p=document.getElementById("s1").value
+    var q =document.getElementById("s2").value
+
+    if(Anagram(p,q))
+    alert(`${p} & ${q} are anagram`)
+else
+   alert(`${p} & ${q} are not  anagram`)
+
+}
+    </script>
+</body>
+</html>

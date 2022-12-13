@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const colors=new Array()
+        colors[0]="Red"
+        colors[1]="Green"
+        colors[2]="Pink"
+        colors[3]="black"
+        
+        const fruits=new Array("Apple","Greps","Banana")
+
+        const day=["Monday","Sunday","Friday"]
+
+        document.write(colors)
+        document.write("<br>")
+
+        document.write(fruits)
+        document.write("<br>")
+
+        document.write(day.toString())
+        document.write("<br>")
+
+        document.write(fruits.length)
+        document.write("<br>")
+
+       
+        const t=colors.concat(fruits,day)
+        document.write(t)
+
+        colors.push("Blue")  //Add color last
+        document.write("<br>")
+
+        colors.unshift("White") ///Add color first 
+        document.write("<br>")
+
+        document.write(colors)
+        document.write("<br>")
+
+        document.write(colors.pop())
+        document.write("<br>")
+
+        document.write(colors.shift())
+        document.write("<br>")
+
+        document.write(colors)
+        document.write("<br>")
+
+        document.write(fruits.join("****"))
+        document.write("<br>")
+
+        document.write(fruits.toString())
+        document.write("<br>")
+
+
+        fruits.reverse()
+        document.write(fruits)
+
+        document.write("<br>")
+fruits.sort()
+document.write(fruits)
+
+
+        
+
+    </script>
+</body>
+</html>

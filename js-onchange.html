@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="" onchange="change(this)">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+
+        <option value="yellow">yellow</option>
+        <option value="pink">pink</option>
+        <option value="blue">blue</option>
+        <option value="purple">purple</option>
+
+    </select>
+    <input type="text" onkeyup="show(this)"><p id="ans"></p>
+
+    <script>
+        function change(x)
+        {
+            let y=document.getElementsByTagName("body")[0]
+            y.style.background = x.value
+        }
+        function show(x)
+        {
+            document.getElementById("ans").innerHTML=x.value.toUpperCase()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="xc">Circle X-Center:</label>
+    <input type="text" id="xc"><br>
+    <label for="yc">Circle y-Center :</label>
+    <input type="text" id="yc"><br>
+    <label for="r">Circle Radius:</label>
+    <input type="text" id="r"><br>
+    <label for="x">Coordinate:</label>
+    <input type="text" id="x"><br>
+    <label for="y">Coordinate:</label>
+    <input type="text" id="y"><br>
+
+    <button onclick="check()">Check</button>
+
+    <script>
+        
+        function check()
+        {
+         var xc=parseFloat(document.getElementById("xc").value)
+         var yc=parseFloat(document.getElementById("yc").value)
+         var r=parseFloat(document.getElementById("r").value)
+         var x=parseFloat(document.getElementById("x").value)
+         var y=parseFloat(document.getElementById("y").value)
+
+        var d=Math.sqrt(Math.pow(x-xc,2)+Math.pow(y-yc,2))
+
+        if(d==r)
+        alert(`(${x},${y}) lies on the circle`)
+        else if(d>r)
+        alert(`(${x},${y}) lies outside circle`)
+        else
+        alert(`(${x},${y}) lies inside circle`)
+
+
+
+        }
+    </script>
+</body>
+</html>
+        
+        
+        
+        
+        
+        }
+    </script>
+</body>
+</html>
+       
+            }
+    </script>
+</body>
+</html>
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="str">Enter String : </label>
+    <input type="text" id="str">
+    <button onclick="left_rotate(str.value)">left Rotate</button>
+    <script>
+        function left_rotate(s)
+        {
+            var words=s.split(" ")
+            for(var i=0;i<words.length;i++)
+            {
+                var x=words.shift()
+                words.push(x)
+                document.write(words + "<br>")
+            }
+        }
+        function right_rotate(s)
+        {
+            var words=s.split(" ")
+            for(var i=0;i<words.length;i++)
+            {
+                var x=words.pop()
+                words.push(x)
+                document.write(words + "<br>")
+            }
+        }
+   
+    </script>
+</body>
+</html>

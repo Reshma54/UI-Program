@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function product(a,b)
+        {
+            return a*b;
+        }
+        function add(a,b)
+        {
+            return parseInt(a)+parseInt(b)
+        }
+        function sub(a,b)
+        {
+            return a-b
+        }
+        function div(a,b)
+        {
+            return a/b
+        }
+        function rem(a,b)
+        {
+            return a%b
+        }
+        function power(a,b)
+        {
+            return a**b
+        }
+
+    </script>
+    <label for="n1">Number</label>
+    <input type="number" id="n1"><br>
+    <label for="n2">Number</label>
+    <input type="number" id="n2"><br>
+    <button onclick="alert('Answer='+product(n1.value,n2.value))">*</button>
+    <button onclick="alert('Answer='+add(n1.value,n2.value))">+</button>
+    <button onclick="alert('Answer='+sub(n1.value,n2.value))">-</button>
+    <button onclick="alert('Answer='+div(n1.value,n2.value))">/</button>
+    <button onclick="alert('Answer='+power(n1.value,n2.value))">**</button>
+    <button onclick="alert('Answer='+rem(n1.value,n2.value))">%</button>
+
+</body>
+</html>

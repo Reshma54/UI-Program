@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b>Date :</b>
+    <input type="number" id="d" min="1" max="32" placeholder="Day">
+    <input type="number" id="m" min="1" max="12" placeholder="Month">
+    <input type="number" id="y" min="1900" max="3000" placeholder="Year">
+    <button onclick="check()">Check</button><br>
+    <p id="msg"></p>
+
+    <script>
+        function isLeap(y)
+        {
+            return y%4==0 && y%100!=0 || Y%400==0
+
+
+        }
+        Function check()
+        {
+            d=parseInt(document.grtElementById("d").value);
+            m=parseInt(document.grtElementById("m").value);
+            y=parseInt(document.grtElementById("y").value);
+
+            switch (m) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:  
+                case 12:
+                    if(d>=1 && d<=31)
+                    msg ="valid"
+
+                    else
+
+                    msg ="Invalid"  
+                    break;
+
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        if(d>=1 && d<=30)
+                        msg = "Valid"
+
+                        else
+
+                        msg = "Invalid"
+                        break;
+                        case 2:
+                            if(isLeap(y))    
+                        {
+                            if(d>=1 && d<=28)
+                            msg = "valid"
+
+                            else
+
+                            msg = "invalid"
+
+                            }
+            
+            }
+            document.getElementById("msg").innerHTML=msg;
+
+            
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChessBox</title>
+
+    <style>
+        .black
+        {
+            width:40px;
+            height: 40px;
+            background-color: black;
+            color:white;
+            text-align: center;
+            font-size: 22pt;
+
+        }
+        .white
+        {
+            width:40px;
+            height: 30px;
+            background-color: white;
+            color: blue;
+            text-align: center;
+            font-size: 22pt;
+
+
+
+
+        }
+        button{
+
+
+        }
+    </style>
+</head>
+<body>
+    <table>
+    <script>
+        f=false
+        for(let i=1;i<=8;i++){
+        document.write("<tr>");
+            for(let j=1;j<=8;j++)
+            {
+            document.write(f?"<td class='white' id='id${i}${j}'></td>":"<td class='black' id='id${i}${j}'></td>");
+            f=!f;
+            }
+            f=!f;
+            document.write("</tr>")
+        }
+        document.getElementById("id11").innerHTML="*";
+        var i=1,j=1;
+
+        function up()
+        {
+            document.getElementById('id${i}${j}').innerHTML=" ";
+            if(i>1) 
+            {i--;count++;}
+            else alert("Invalid Move")
+            document.getElementById('id${i}${j}').innerHTML="* ";
+            document.getElementById("count").innerHTML='Moves: ${count}';
+
+        }
+        
+        function down()
+        {
+            document.getElementById('id${i}${j}').innerHTML=" ";
+            if(i<8) {i++; count++;}
+            else alert("Invalid Move")
+
+            document.getElementById('id${i}${j}').innerHTML="* ";
+            document.getElementById("count").innerHTML='Moves: ${count}';
+
+
+        }
+
+        
+        function left()
+        {
+            document.getElementById('id${i}${j}').innerHTML=" ";
+            if(j>1) {j--; count++;}
+            else alert("Invalid Move")
+
+            document.getElementById('id${i}${j}').innerHTML="* ";
+            document.getElementById("count").innerHTML='Moves: ${count}';
+
+
+        }
+
+        
+        function right()
+        {
+            document.getElementById('id${i}${j}').innerHTML=" ";
+            if(j<8) {j++; count++;}
+            else alert("Invalid Move")
+
+            document.getElementById('id${i}${j}').innerHTML="* ";
+            document.getElementById("count").innerHTML='Moves: ${count}';
+
+
+        }
+
+        
+        function upright()
+        {
+            document.getElementById('id${i}${j}').innerHTML=" ";
+            if(i>1 && j<8) { i--;
+                j++;
+                count++;
+            }
+            else alert("Invalid Move")
+
+            document.getElementById('id${i}${j}').innerHTML="* ";
+            document.getElementById("count").innerHTML='Moves: ${count}';
+
+
+        }
+        
+        function upleft()
+        {
+            document.getElementById('id${i}${j}').innerHTML=" ";
+            if(i>1 && j>1) 
+                {i--;
+                    j--;
+                    count++;
+
+                }
+                else alert("Invalid Move")
+
+            document.getElementById('id${i}${j}').innerHTML="* ";
+            document.getElementById("count").innerHTML='Moves: ${count}';
+
+
+        }
+
+        function downright()
+        {
+            document.getElementById('id${i}${j}').innerHTML=" ";
+            if(i<8 && j<8){ i++;
+                j++;
+                count++;
+            }
+            else alert("Invalid Move")
+
+            document.getElementById('id${i}${j}').innerHTML="* ";
+            document.getElementById("count").innerHTML='Moves: ${count}';
+
+
+        }
+
+        function downleft()
+        {
+            document.getElementById('id${i}${j}').innerHTML=" ";
+            if(i<8 && j>1) 
+            {i++;
+                j--;
+                couont++;
+
+            }
+            else alert("Invalid Move")
+
+            document.getElementById('id${i}${j}').innerHTML="* ";
+            document.getElementById("count").innerHTML='Moves: ${count}';
+
+
+        }
+
+
+    </script>
+    
+        <td><button onclick="up()">↑</button></td>
+        <td><button onclick="down()">↓</button></td>
+        <td><button onclick="left()">←</button></td>
+        <td><button onclick="right()">→</button></td>
+        <td><button onclick="upright()">↗</button></td>
+        <td><button onclick="upleft()">↖</button></td>
+        <td><button onclick="downright()">↘</button></td>
+        <td><button onclick="downleft()">↙</button></td>
+
+    </tr>
+    </table>
+    <div id="count"> Moves :0</div>
+</body>
+</html>

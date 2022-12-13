@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para1" onmousedown="down()" onmouseup="up()">     Paragraph writing is a necessary skill that benefits people of all ages and within all industries. This is why it’s important for teachers to begin introducing paragraph writing topics into their classroom curriculum as soon as possible.
+
+        alert("Page is load") 
+    </p>
+
+    <button onclick="foo()">Click me</button>
+    <p id="para2"></p>
+
+
+    <script>
+
+        function foo()
+        {
+            
+        }
+        function down()
+        {
+            document.getElementById("para1").style.color="red"
+
+        }
+
+        function up()
+        {
+            document.getElementById("para1").style.color="grren"
+
+        }
+        function Enter()
+        {
+            document.getElementById("para1").style.background="pink"
+
+        }
+
+        function leave()
+        {
+            document.getElementById("para1").style.background="grren"
+
+        }
+    
+    </script>
+</body>
+</html>

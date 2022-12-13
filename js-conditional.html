@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b>Number 1</b>
+    <input type="text" id="n1"><br>
+    <b>number 2</b>
+    <input type="text" id="n2"><br>
+
+    <b>number 3</b>
+    <input type="text" id="n3"><br>
+    <b>Answer :</b>  <input type="text" id="ans"><br>
+
+    <button onclick="max3()">show</button>
+
+    <script>
+        function max3()
+        {
+            x= parseInt( document.getElementById("n1").value)
+            
+            y= parseInt( document.getElementById("n2").value)
+            
+            z= parseInt( document.getElementById("n3").value)
+
+            max=x>y?(x>z?x:z):(y>z?y:z);
+            document.getElementById("ans").value=max
+
+        }
+    </script>
+</body>
+</html>

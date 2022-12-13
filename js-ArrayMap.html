@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+
+       //map() Exmple
+
+        let nos=[23,45,14,32,45,67,89]
+        let squares=nos.map((x)=>x**2)
+    document.write(squares)
+
+    
+
+    //Filter() Example
+
+
+    let event=nos.filter((x)=>x%2==0)
+    document.write(event)
+
+    document.write("<br>")
+//Reduce()
+let sum=nos.reduce((x,y)=>x+y)
+document.write(sum)
+document.write("<br>")
+//every()
+document.write(nos.every((x)=>x>=8))
+document.write("<br>")
+//some()
+document.write(nos.some((x)=>x>=45))
+document.write("<br>")
+//indexOf()
+document.write("<br>")
+document.write(nos.indexOf("14"))
+document.writeln(nos.indexOf("14,2"))
+//LastIndexOf()
+document.write("<br>")
+document.writeln(nos.lastIndexOf(14))
+//
+document.write("<br>")
+document.writeln(nos.find((x)=>x>=89))
+
+//findIndex()
+document.write("<br>")
+document.writeln(nos.findIndex((x)=>x>=54))
+//Array.from()
+document.write("<br>")
+document,writeln(nos.form())
+
+//Array.key()
+document.write("<br>")
+document.writeln(nos.keys())
+
+//include()
+
+document.writeln(nos.includes(14))
+
+//Array.entries()
+const employee=["Shani","@rsh",56426,100]
+const e=employee.entries()
+for(let x of e)
+document.write(x+"<br>")
+
+
+
+</script>
+</body>
+</html>

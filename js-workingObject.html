@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+const student={
+    rollno:21,
+    name:'@rsh',
+    percantage:55
+        
+    }
+
+    const x= JSON.stringify(student)
+    localStorage.getItem("info",x)
+
+    const y=localStorage.getItem("info")
+    const  student1=JSON.parse(y)
+
+    document.write(rollno)
+    
+    </script>
+</body>
+</html>

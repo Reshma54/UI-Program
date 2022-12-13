@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a1=[10,30,50,40,80]
+        const a2=[101,530,950,440,380]
+        const a3=[...a1 ,...a2]
+
+        console.log(a3)
+
+        const x=[50,60,10,20,30]
+        const [y,z,...a5]=x
+
+        console.log(y)
+        console.log(z)
+        console.log(a5)
+
+        const cat ={
+            name:"Mani",
+            age:10,
+            weight:5.5
+        }
+        const dog={
+            name:"Tommy",
+            height:3.4,
+            breed:"Husky"
+        }
+
+        const animal={
+            ...cat,...dog
+        }
+
+        console.log(animal)
+
+    </script>
+</body>
+</html>

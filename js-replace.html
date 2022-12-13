@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td><b>Text :</b></td>
+            <td><textarea name="" id="str" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td><b>Find:</b></td>
+            <td><input type="text" id="fstr"></td>
+
+        </tr>
+       
+        <tr>
+            <td><b>replace :</b></td>
+            <td><input type="text" id="rstr"></td>
+
+        </tr>
+        <tr>
+            <td><button onclick="replace_str()">replace</button></td>
+        </tr>
+    </table>
+    <script>
+            function replace_str()
+            {
+                var s=document.getElementById("str").value
+                var fs=document.getElementById("fstr").value
+                var rs=document.getElementById("rstr").value
+                while(s.search(fs)!=-1)
+                {
+                s=s.replace(fs,rs)
+                n++
+
+                }
+                document.getElementById("str").value=s
+                alert("No. of replacement !!!"+n)
+            }
+    </script>
+</body>
+</html>

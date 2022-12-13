@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            background-color:palevioletred;
+            width: 200px;
+            height: 300px;
+            border: 3px solid blue;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" onmousemove="show(event)" onmouseleave="clear1()"></div><br>
+    <div id="div2"></div>
+<script>
+    function show(event)
+    {
+        let x=event.clientX
+        let y=event.clientY
+       let s=`(${x},${y})`
+
+        document.getElementById("div2").innerHTML=s
+    }
+
+    function clear1()
+    {
+        document.getElementById("div2").innerHTML=""
+    }
+</script>
+</body>
+</html>

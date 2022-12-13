@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Emp {
+
+            constructor(name,age)
+            {
+            this.name=name
+            this.age=age
+            }
+        
+show(){
+    return `My name is ${this.name}and I am ${this.age} years old <br>`
+}
+
+}class Manager extends Emp{
+    constructor (name,age,salary){
+        super(name,age)
+        this.salary=salary
+    }
+
+    display(){
+        return this.show()+`My salary is ${this.salary}`
+    }
+}
+
+        const e1=new Manager("Rosh",22,12546)
+        const e2=new Manager("Shani",21,254652)
+
+        document.write(e1.display())
+        document.write(e2.display())
+
+    </script>
+</body>
+</html>
